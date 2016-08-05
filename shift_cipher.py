@@ -9,3 +9,14 @@ class ShiftCipher:
         :return: the encrypted message
         """
         return text;
+
+    @staticmethod
+    def decrypt(text="", key=0):
+        """
+        Decrypts the text by shifting each character "down" the alphabet by the number of letters specified by the key.
+
+        :param text: the text to decrypt
+        :param key: each alphabet character of text will be shifted down by this amount
+        :return: the decrypted message
+        """
+        return text;
