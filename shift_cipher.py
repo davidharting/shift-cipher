@@ -8,6 +8,10 @@ class ShiftCipher:
         :param key: each alphabet character of text will be shifted up by this amount
         :return: the encrypted message
         """
+        cipher_text = ""
+        for c in text:
+            cipher_text += chr(ord(c) + key)
+
         return text;
 
     @staticmethod
