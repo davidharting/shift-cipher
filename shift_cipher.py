@@ -1,4 +1,13 @@
 class ShiftCipher:
+    
+    @staticmethod
+    def _shift(text, amount):
+        shifted_text = ""
+        for c in text:
+            shifted_text += chr(ord(c) + amount)
+
+        return shifted_text
+
     @staticmethod
     def encrypt(text="", key=0):
         """
@@ -8,11 +17,7 @@ class ShiftCipher:
         :param key: each alphabet character of text will be shifted up by this amount
         :return: the encrypted message
         """
-        cipher_text = ""
-        for c in text:
-            cipher_text += chr(ord(c) + key)
-
-        return cipher_text;
+        return ShiftCipher._shift(text, key)
 
     @staticmethod
     def decrypt(text="", key=0):
