@@ -2,10 +2,16 @@ class ShiftCipher:
     
     @staticmethod
     def _shift(text, amount):
+        """
+        Shift each character in the text by the specified amount. Amount is defined in terms of unicode values. 
+
+        :param text: the text to shift
+        :param amont: the amount to shift the text by
+        :return: the shifted text
+        """
         shifted_text = ""
         for c in text:
             shifted_text += chr(ord(c) + amount)
-
         return shifted_text
 
     @staticmethod
