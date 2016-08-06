@@ -7,12 +7,10 @@ class ShiftCipher:
 
         :param text: the text to shift
         :param amont: the amount to shift the text by
-        :return: the shifted text
+        :return: a generator containing the shifted text
         """
-        shifted_text = ""
         for c in text:
-            shifted_text += chr(ord(c) + amount)
-        return shifted_text
+            yield chr(ord(c) + amount)
 
     @staticmethod
     def encrypt(text="", key=0):
@@ -23,7 +21,7 @@ class ShiftCipher:
         :param key: each alphabet character of text will be shifted up by this amount
         :return: the encrypted message
         """
-        return ShiftCipher._shift(text, key)
+        return ''.join(ShiftCipher._shift(text, key))
 
     @staticmethod
     def decrypt(text="", key=0):
@@ -34,4 +32,4 @@ class ShiftCipher:
         :param key: each alphabet character of text will be shifted down by this amount
         :return: the decrypted message
         """
-        return ShiftCipher._shift(text, -key)
+        return ''.join(ShiftCipher._shift(text, -key))
