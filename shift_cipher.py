@@ -28,4 +28,4 @@ class ShiftCipher:
         :param key: each alphabet character of text will be shifted down by this amount
         :return: the decrypted message
         """
-        return text;
+        return ShiftCipher._shift(text, -key)
