@@ -12,7 +12,7 @@ class ShiftCipher:
         for c in text:
             cipher_text += chr(ord(c) + key)
 
-        return text;
+        return cipher_text;
 
     @staticmethod
     def decrypt(text="", key=0):
