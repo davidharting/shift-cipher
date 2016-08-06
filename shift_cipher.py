@@ -1,5 +1,10 @@
 class ShiftCipher:
-    
+    """
+    A symmetric key cipher that is not strong enough for any real applications.
+
+    Although it was strong enough for Ceaser https://en.wikipedia.org/wiki/Caesar_cipher.
+    """
+
     @staticmethod
     def _shift(text, amount):
         """
