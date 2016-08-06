@@ -15,10 +15,10 @@ class ShiftCipher:
     @staticmethod
     def encrypt(text="", key=0):
         """
-        Encrypts the text by shifting each character "up" the alphabet by the amount specified by key.
+        Encrypts the text by shifting each character "up" (in terms of unicode value) by the amount specified by the key.
 
         :param text: the text to encrypt
-        :param key: each alphabet character of text will be shifted up by this amount
+        :param key: each character of text will be shifted up by this amount
         :return: the encrypted message
         """
         return ''.join(ShiftCipher._shift(text, key))
@@ -26,10 +26,10 @@ class ShiftCipher:
     @staticmethod
     def decrypt(text="", key=0):
         """
-        Decrypts the text by shifting each character "down" the alphabet by the number of letters specified by the key.
+        Decrypts the text by shifting each character "down" (in terms of unicode vlaue) by the amount specified by the key.
 
         :param text: the text to decrypt
-        :param key: each alphabet character of text will be shifted down by this amount
+        :param key: each character will be shifted down by this amount
         :return: the decrypted message
         """
         return ''.join(ShiftCipher._shift(text, -key))
