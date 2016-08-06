@@ -1,8 +1,7 @@
 from shift_cipher import ShiftCipher
 
 def main():
-    message = "This is the clear text message full of secrets."
-    key = 15
+    message, key = "This is the clear text message full of secrets.", 15
     print(message)
 
     print("... Encrypting ...")
